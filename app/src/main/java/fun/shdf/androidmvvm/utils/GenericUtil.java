@@ -1,4 +1,4 @@
-package fun.shdf.java_aac.utils;
+package fun.shdf.androidmvvm.utils;
 
 import java.lang.reflect.ParameterizedType;
 

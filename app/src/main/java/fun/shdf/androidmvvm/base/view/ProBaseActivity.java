@@ -1,4 +1,4 @@
-package fun.shdf.java_aac.base.view;
+package fun.shdf.androidmvvm.base.view;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -6,9 +6,9 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import fun.shdf.java_aac.AppConstants;
-import fun.shdf.java_aac.base.viewmodel.BaseViewModel;
-import fun.shdf.java_aac.utils.GenericUtil;
+import fun.shdf.androidmvvm.AppConstants;
+import fun.shdf.androidmvvm.base.viewmodel.BaseViewModel;
+import fun.shdf.androidmvvm.utils.GenericUtil;
 
 /**
  * code-time: 2018/9/20

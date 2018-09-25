@@ -1,4 +1,4 @@
-package fun.shdf.java_aac;
+package fun.shdf.androidmvvm;
 
 import android.app.Application;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.content.Context;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
-import fun.shdf.java_aac.utils.SpiderMan;
+import fun.shdf.androidmvvm.utils.SpiderMan;
 
 /**
  * code-time: 2018/9/20

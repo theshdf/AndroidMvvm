@@ -1,12 +1,12 @@
-package fun.shdf.java_aac.ui;
+package fun.shdf.androidmvvm.ui;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.NonNull;
 
-import fun.shdf.java_aac.base.CallBack;
-import fun.shdf.java_aac.base.viewmodel.BaseViewModel;
+import fun.shdf.androidmvvm.base.CallBack;
+import fun.shdf.androidmvvm.base.viewmodel.BaseViewModel;
 
 /**
  * code-time: 2018/9/21 10:47
@@ -14,7 +14,7 @@ import fun.shdf.java_aac.base.viewmodel.BaseViewModel;
  * coder-wechat: zcm656025633
  * exp:
  **/
-public class HomeViewModel extends BaseViewModel<HomeReposity>{
+public class HomeViewModel extends BaseViewModel<HomeReposity> {
 
     private MutableLiveData<String> homeData;
 

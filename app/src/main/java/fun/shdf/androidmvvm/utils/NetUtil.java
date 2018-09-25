@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package fun.shdf.java_aac.utils;
+package fun.shdf.androidmvvm.utils;
 
 import android.content.Context;
 import android.location.LocationManager;
@@ -21,11 +21,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
 import android.telephony.TelephonyManager;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import fun.shdf.java_aac.App;
+
+import fun.shdf.androidmvvm.App;
+
 
 /**
  * 网络工具类

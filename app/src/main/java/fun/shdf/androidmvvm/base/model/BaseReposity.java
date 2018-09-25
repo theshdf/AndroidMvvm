@@ -1,7 +1,7 @@
-package fun.shdf.java_aac.base.model;
+package fun.shdf.androidmvvm.base.model;
 
-import fun.shdf.java_aac.api.ApiService;
-import fun.shdf.java_aac.http.RetrofitUtil;
+import fun.shdf.androidmvvm.api.ApiService;
+import fun.shdf.androidmvvm.http.RetrofitUtil;
 
 /**
  * code-time: 2018/9/20 16:09

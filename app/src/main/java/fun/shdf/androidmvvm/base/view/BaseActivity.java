@@ -1,4 +1,4 @@
-package fun.shdf.java_aac.base.view;
+package fun.shdf.androidmvvm.base.view;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,7 @@ import android.widget.Toast;
  * coder-wechat: zcm656025633
  * exp:根据生命周期封装activity通用的功能和逻辑代码
  **/
-public abstract class BaseActivity extends AppCompatActivity{
+public abstract class BaseActivity extends AppCompatActivity {
 
     private int orientation;//默认竖屏
 

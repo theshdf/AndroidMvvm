@@ -1,6 +1,7 @@
-package fun.shdf.java_aac.api;
+package fun.shdf.androidmvvm.api;
 
-import fun.shdf.java_aac.base.BaseResponse;
+
+import fun.shdf.androidmvvm.base.BaseResponse;
 import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -16,7 +17,7 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST(ApiConstant.LOGIN)
-    Observable<BaseResponse<String>> login(@Field("username")String username,
-                                           @Field("password")String password);
+    Observable<BaseResponse<String>> login(@Field("username") String username,
+                                           @Field("password") String password);
 
 }

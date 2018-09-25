@@ -1,10 +1,11 @@
-package fun.shdf.java_aac.ui;
+package fun.shdf.androidmvvm.ui;
+
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import fun.shdf.java_aac.R;
-import fun.shdf.java_aac.base.view.ProBaseActivity;
+import fun.shdf.androidmvvm.R;
+import fun.shdf.androidmvvm.base.view.ProBaseActivity;
 
 /**
  * code-time: 2018/9/21 10:47

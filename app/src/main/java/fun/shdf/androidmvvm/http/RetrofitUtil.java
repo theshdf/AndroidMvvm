@@ -1,13 +1,13 @@
-package fun.shdf.java_aac.http;
+package fun.shdf.androidmvvm.http;
 
 import android.annotation.SuppressLint;
+
 import java.util.concurrent.TimeUnit;
-import fun.shdf.java_aac.AppConstants;
-import fun.shdf.java_aac.api.ApiConstant;
-import fun.shdf.java_aac.api.ApiService;
+
+import fun.shdf.androidmvvm.AppConstants;
+import fun.shdf.androidmvvm.api.ApiConstant;
+import fun.shdf.androidmvvm.api.ApiService;
 import io.reactivex.Observable;
-import kotlin.jvm.Volatile;
-import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;

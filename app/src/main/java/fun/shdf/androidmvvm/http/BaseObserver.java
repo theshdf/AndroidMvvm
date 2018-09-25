@@ -1,13 +1,15 @@
-package fun.shdf.java_aac.http;
+package fun.shdf.androidmvvm.http;
 
 import com.google.gson.JsonParseException;
+
 import org.json.JSONException;
+
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
-import fun.shdf.java_aac.AppConstants;
-import fun.shdf.java_aac.base.BaseResponse;
+import fun.shdf.androidmvvm.AppConstants;
+import fun.shdf.androidmvvm.base.BaseResponse;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import retrofit2.HttpException;

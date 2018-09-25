@@ -1,9 +1,9 @@
-package fun.shdf.java_aac.ui;
+package fun.shdf.androidmvvm.ui;
 
-import fun.shdf.java_aac.base.BaseResponse;
-import fun.shdf.java_aac.base.CallBack;
-import fun.shdf.java_aac.base.model.BaseReposity;
-import fun.shdf.java_aac.http.BaseObserver;
+import fun.shdf.androidmvvm.base.BaseResponse;
+import fun.shdf.androidmvvm.base.CallBack;
+import fun.shdf.androidmvvm.base.model.BaseReposity;
+import fun.shdf.androidmvvm.http.BaseObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 

@@ -1,4 +1,4 @@
-package fun.shdf.java_aac.utils;
+package fun.shdf.androidmvvm.utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 
-import fun.shdf.java_aac.R;
+import fun.shdf.androidmvvm.R;
 
 /**
  * author : ChenPeng

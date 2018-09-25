@@ -1,6 +1,7 @@
-package fun.shdf.java_aac.base;
+package fun.shdf.androidmvvm.base;
 
-import fun.shdf.java_aac.api.ApiConstant;
+
+import fun.shdf.androidmvvm.api.ApiConstant;
 
 /**
  * code-time: 2018/9/21 11:18

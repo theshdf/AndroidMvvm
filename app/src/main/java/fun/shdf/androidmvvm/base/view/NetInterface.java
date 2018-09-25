@@ -1,4 +1,4 @@
-package fun.shdf.java_aac.base.view;
+package fun.shdf.androidmvvm.base.view;
 
 /**
  * code-time: 2018/9/21 10:44
