@@ -9,8 +9,8 @@ android {
         applicationId "fun.shdf.androidmvvm"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode var["versionCode"]
+        versionName var["versionName"]
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

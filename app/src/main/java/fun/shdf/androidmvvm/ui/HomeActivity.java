@@ -1,7 +1,10 @@
 package fun.shdf.androidmvvm.ui;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import fun.shdf.androidmvvm.R;
@@ -43,5 +46,16 @@ public class HomeActivity extends ProBaseActivity<HomeViewModel> {
         }
         );
         mViewModel.getHomeData("shdf","shdf");
+        getVer();
+    }
+
+    private void getVer() {
+        try {
+            PackageInfo packageInfo = getPackageManager()
+                    .getPackageInfo(this.getPackageName(),0);
+            Log.d("Tag",packageInfo.versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
