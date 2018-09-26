@@ -30,7 +30,7 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
 
     @Override
     public void onSubscribe(Disposable d) {
-
+        addDisposable(d);
     }
 
     @Override
@@ -87,4 +87,6 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
      * @param msg
      */
     public abstract void onFailure(String msg);
+
+    public abstract void addDisposable(Disposable disposable);
 }

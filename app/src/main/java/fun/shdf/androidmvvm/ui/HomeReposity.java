@@ -5,6 +5,7 @@ import fun.shdf.androidmvvm.base.CallBack;
 import fun.shdf.androidmvvm.base.model.BaseReposity;
 import fun.shdf.androidmvvm.http.BaseObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -15,14 +16,12 @@ import io.reactivex.schedulers.Schedulers;
  **/
 public class HomeReposity extends BaseReposity {
 
-
     /**
      * 登录
      * @param username
      * @param password
      */
     public void getHomeData(String username, String password, final CallBack callBack){
-
         apiService.login(username,password)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
@@ -40,6 +39,11 @@ public class HomeReposity extends BaseReposity {
             @Override
             public void onFailure(String msg) {
                 callBack.onFailer(msg);
+            }
+
+            @Override
+            public void addDisposable(Disposable disposable) {
+                addDisposable(disposable);
             }
         });
     }

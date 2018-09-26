@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import java.util.concurrent.TimeUnit;
 
 import fun.shdf.androidmvvm.AppConstants;
+import fun.shdf.androidmvvm.BuildConfig;
 import fun.shdf.androidmvvm.api.ApiConstant;
 import fun.shdf.androidmvvm.api.ApiService;
 import io.reactivex.Observable;
@@ -23,7 +24,7 @@ public class RetrofitUtil {
 
     private static OkHttpClient httpClient;
 
-    private ApiService apiService;
+    private volatile ApiService apiService;
 
     private volatile static  RetrofitUtil  mRetrofitUtil;//防止指令重排序
 
@@ -81,10 +82,14 @@ public class RetrofitUtil {
                 .build();
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.addInterceptor(basicParamsInterceptor).
-                addInterceptor(new HttpLoggingInterceptor(new HttpLogger()).setLevel(HttpLoggingInterceptor.Level.BODY)).
                 connectTimeout(AppConstants.TIME_OUT, TimeUnit.SECONDS).
                 readTimeout(AppConstants.TIME_OUT, TimeUnit.SECONDS).
                 writeTimeout(AppConstants.TIME_OUT, TimeUnit.SECONDS);
+        if(BuildConfig.DEBUG){
+            builder.addInterceptor(
+                    new HttpLoggingInterceptor(
+                    new HttpLogger()).setLevel(HttpLoggingInterceptor.Level.BODY));
+        }
         httpClient = builder.build();
     }
 }

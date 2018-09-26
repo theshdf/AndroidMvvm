@@ -33,4 +33,9 @@ public class BaseViewModel<T extends BaseReposity> extends AndroidViewModel {
             state = new MutableLiveData<>();
     }
 
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        mReposity.clearDisposable();
+    }
 }
