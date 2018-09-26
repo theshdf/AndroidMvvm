@@ -9,6 +9,7 @@ import android.content.Context;
  * exp：
  **/
 public class CustomProgressDialog extends ProgressDialog {
+
     public CustomProgressDialog(Context context) {
         super(context);
     }

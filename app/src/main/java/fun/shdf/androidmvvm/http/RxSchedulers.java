@@ -1,6 +1,7 @@
 package fun.shdf.androidmvvm.http;
 
 import android.widget.Toast;
+
 import fun.shdf.androidmvvm.App;
 import fun.shdf.androidmvvm.utils.NetUtil;
 import fun.shdf.androidmvvm.utils.ViewUtil;
@@ -42,6 +43,7 @@ public class RxSchedulers {
 
     /**
      * 添加订阅关系，统一管理
+     *
      * @param disposable
      */
     public static void addDisposable(Disposable disposable) {

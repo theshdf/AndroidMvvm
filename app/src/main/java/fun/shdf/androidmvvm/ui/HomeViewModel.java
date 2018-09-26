@@ -27,7 +27,6 @@ public class HomeViewModel extends BaseViewModel<HomeReposity> {
         super(application);
     }
 
-
     /**
      *
      * @return

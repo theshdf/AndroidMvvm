@@ -56,7 +56,7 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
      */
     @Override
     public void onError(Throwable e) {
-        String message = null;
+        String message;
         if (e instanceof UnknownHostException) {
             message = AppConstants.UNKNOW_HOST;
         } else if (e instanceof HttpException) {

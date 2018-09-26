@@ -41,7 +41,6 @@ public class HomeReposity extends BaseReposity {
                     public void onFailure(String msg) {
                         callBack.onFailer(msg);
                     }
-
                 });
     }
 

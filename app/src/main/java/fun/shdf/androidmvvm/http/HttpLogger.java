@@ -22,7 +22,7 @@ public class HttpLogger implements HttpLoggingInterceptor.Logger{
         }
         if ((message.startsWith("{") && message.endsWith("}"))
                 || (message.startsWith("[") && message.endsWith("]"))) {
-            Logger.json(message);
+            Logger.json("json"+message);
         }
         mMessage.append(message.concat("\n"));
         if (message.startsWith("<-- END HTTP")) {
