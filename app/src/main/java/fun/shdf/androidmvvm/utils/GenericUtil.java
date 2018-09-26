@@ -32,10 +32,8 @@ public class GenericUtil {
             } catch (ClassCastException e) {
                 e.printStackTrace();
             }
-
         }
         return null;
-
     }
 
 }
