@@ -10,6 +10,7 @@ import java.net.UnknownHostException;
 
 import fun.shdf.androidmvvm.AppConstants;
 import fun.shdf.androidmvvm.base.BaseResponse;
+import fun.shdf.androidmvvm.utils.NetUtil;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import retrofit2.HttpException;
@@ -30,7 +31,13 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
 
     @Override
     public void onSubscribe(Disposable d) {
-        addDisposable(d);
+        //todo 判断网络
+        if(NetUtil.isNetworkAvailable()){
+        }
+        else{
+            d.dispose();
+            //todo 提示没有网络
+        }
     }
 
     @Override
@@ -62,6 +69,8 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
         } else if (e instanceof ConnectException) {
             message = AppConstants.CONNECT_EXCEPTION;
         }
+        else
+            message = e.getMessage();
         onFailure(message);
     }
 
@@ -88,5 +97,4 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
      */
     public abstract void onFailure(String msg);
 
-    public abstract void addDisposable(Disposable disposable);
 }

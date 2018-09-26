@@ -6,6 +6,7 @@ import android.content.Context;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
+import fun.shdf.androidmvvm.utils.ActivityControlUtil;
 import fun.shdf.androidmvvm.utils.SpiderMan;
 
 /**
@@ -35,5 +36,9 @@ public class App extends Application {
 
     public static Context getContext(){
         return context;
+    }
+
+    public static Context getActivity(){
+        return ActivityControlUtil.getLastActivity();
     }
 }

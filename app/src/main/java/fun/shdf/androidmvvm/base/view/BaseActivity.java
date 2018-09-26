@@ -7,6 +7,9 @@ import android.view.KeyEvent;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import fun.shdf.androidmvvm.App;
+import fun.shdf.androidmvvm.utils.ActivityControlUtil;
+
 /**
  * code-time: 2018/9/20
  * code-author: by shdf
@@ -36,6 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setStatus();
         initStatus();
         setHomeAvtivity();//当是首页时，点击两次关闭
+        ActivityControlUtil.addActivity(this);
         setContentView(getLayoutId());
         initIntent();
         initView();
@@ -152,5 +156,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        ActivityControlUtil.removeActivity(this);
     }
 }

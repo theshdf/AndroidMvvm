@@ -13,12 +13,13 @@ import io.reactivex.disposables.Disposable;
  **/
 public abstract class BaseReposity {
 
-    private CompositeDisposable compositeDisposable;
+    protected CompositeDisposable compositeDisposable;
 
     protected ApiService apiService;
 
-     public BaseReposity(){
+    public BaseReposity(){
         apiService = RetrofitUtil.newInstance().getApiService();
+        compositeDisposable = new CompositeDisposable();
     }
 
     /**
@@ -28,15 +29,5 @@ public abstract class BaseReposity {
          if(null != compositeDisposable){
              compositeDisposable.clear();
          }
-    }
-
-    /**
-     * 添加订阅关系，统一管理
-     * @param disposable
-     */
-    public void addDisposable(Disposable disposable){
-        if(null != disposable){
-            compositeDisposable.add(disposable);
-        }
     }
 }
