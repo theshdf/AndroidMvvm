@@ -91,8 +91,8 @@ public class RetrofitExtUtil{
          * @param <T>
          * @return
          */
-        public <T> T getApiService(Class<T> apiservice) {
-            return mBuildRetrofit.create(apiservice);
-        }
+    }
+    public <T> T createApiService(Class<T> apiservice) {
+        return mBuildRetrofit.create(apiservice);
     }
 }

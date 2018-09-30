@@ -6,6 +6,7 @@ import fun.shdf.androidmvvm.base.BaseResponse;
 import fun.shdf.androidmvvm.base.CallBack;
 import fun.shdf.androidmvvm.base.model.BaseReposity;
 import fun.shdf.androidmvvm.http.BaseObserver;
+import fun.shdf.androidmvvm.http.RetrofitExtUtil;
 import fun.shdf.androidmvvm.http.RetrofitUtil;
 import fun.shdf.androidmvvm.http.RxSchedulers;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -27,9 +28,9 @@ public class HomeReposity extends BaseReposity {
      * @param password
      */
     public void getHomeData(String username, String password, final CallBack callBack) {
-       new RetrofitUtil.Builder()
+       new RetrofitExtUtil.Builder()
                .addUrl(ApiConstant.URL).build()
-               .getApiService(ApiService.class)
+               .createApiService(ApiService.class)
                .login(username, password)
                .compose(RxSchedulers.compose(compositeDisposable))
                .subscribe(new BaseObserver<String>() {
