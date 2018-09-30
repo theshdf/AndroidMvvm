@@ -2,10 +2,8 @@ package fun.shdf.androidmvvm;
 
 import android.app.Application;
 import android.content.Context;
-
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
-
 import fun.shdf.androidmvvm.utils.ActivityControlUtil;
 import fun.shdf.androidmvvm.utils.SpiderMan;
 
@@ -33,6 +31,7 @@ public class App extends Application {
                     //todo  log 异常信息
                 });
     }
+
 
     public static Context getContext(){
         return context;

@@ -1,9 +1,12 @@
 package fun.shdf.androidmvvm.ui;
 
+import fun.shdf.androidmvvm.api.ApiConstant;
+import fun.shdf.androidmvvm.api.ApiService;
 import fun.shdf.androidmvvm.base.BaseResponse;
 import fun.shdf.androidmvvm.base.CallBack;
 import fun.shdf.androidmvvm.base.model.BaseReposity;
 import fun.shdf.androidmvvm.http.BaseObserver;
+import fun.shdf.androidmvvm.http.RetrofitUtil;
 import fun.shdf.androidmvvm.http.RxSchedulers;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -24,9 +27,12 @@ public class HomeReposity extends BaseReposity {
      * @param password
      */
     public void getHomeData(String username, String password, final CallBack callBack) {
-        apiService.login(username, password)
-                .compose(RxSchedulers.compose(compositeDisposable))
-                .subscribe(new BaseObserver<String>() {
+       new RetrofitUtil.Builder()
+               .addUrl(ApiConstant.URL).build()
+               .getApiService(ApiService.class)
+               .login(username, password)
+               .compose(RxSchedulers.compose(compositeDisposable))
+               .subscribe(new BaseObserver<String>() {
                     @Override
                     public void onSuccessData(BaseResponse<String> data) {
                         callBack.onSuccessData(data);
