@@ -1,7 +1,7 @@
 package fun.shdf.androidmvvm.http;
 
 import fun.shdf.androidmvvm.api.ApiConstant;
-import okhttp3.OkHttpClient;
+import fun.shdf.androidmvvm.utils.CheckObj;
 import retrofit2.CallAdapter;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
@@ -23,10 +23,8 @@ public class RetrofitExtUtil{
 
     private Converter.Factory factory;
 
-    OkHttpClient.Builder builder;
-
     public RetrofitExtUtil(Builder builder){
-        this.builder = new OkHttpClient.Builder();
+        CheckObj.checkNotNull(builder,"builder == null");
         this.baseUrl = builder.baseUrl;
         this.callAdapter = builder.callAdapter;
         this.factory = builder.factory;
