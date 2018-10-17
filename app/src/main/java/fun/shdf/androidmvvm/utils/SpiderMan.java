@@ -51,7 +51,7 @@ public class SpiderMan implements Thread.UncaughtExceptionHandler {
     private void handleException(CrashModel model) {
         if (mBuilder.mEnable && mBuilder.mShowCrashMessage) {
             Intent intent = new Intent(mContext, CrashActivity.class);
-            intent.putExtra(CrashActivity.CRASH_MODEL, model);
+            intent.putExtra(CrashActivity.Companion.getCRASH_MODEL(), model);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             mContext.startActivity(intent);
         }
