@@ -3,15 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout_editor_absoluteY="25dp">
-
-    <com.ashokvarma.bottomnavigation.BottomNavigationBar
-        android:id="@+id/bottomNavationBar"
+    android:layout_height="match_parent">
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNaviga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nava"
         android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/home_text_color"
+        android:background="@color/colorAccent"
+
         >
-    </com.ashokvarma.bottomnavigation.BottomNavigationBar>
+    </android.support.design.widget.BottomNavigationView>
+
+
 
 </RelativeLayout>
