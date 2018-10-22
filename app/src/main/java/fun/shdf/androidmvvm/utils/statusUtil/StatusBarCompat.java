@@ -1,4 +1,4 @@
-package me.shdf.baseandroid.util;
+package fun.shdf.androidmvvm.utils.statusUtil;
 
 import android.app.Activity;
 import android.os.Build;
