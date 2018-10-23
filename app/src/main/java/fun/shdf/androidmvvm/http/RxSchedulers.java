@@ -27,17 +27,17 @@ public class RxSchedulers {
                 .unsubscribeOn(Schedulers.io())
                 .doOnSubscribe(disposable -> {
                     if (!NetUtil.isNetworkAvailable()) {
-                        Toast.makeText(App.getContext(), "请检查网络", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(App.Companion.getContext(), "请检查网络", Toast.LENGTH_SHORT).show();
                         disposable.dispose();
                     } else {
                         addDisposable(disposable);
-                        ViewUtil.getDialogInstance(App.getActivity()).show();
+                        ViewUtil.getDialogInstance(App.Companion.getActivity()).show();
                     }
                 })
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnTerminate(() -> {
-                    ViewUtil.getDialogInstance(App.getActivity()).hide();
+                    ViewUtil.getDialogInstance(App.Companion.getActivity()).hide();
                 });
     }
 

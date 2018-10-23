@@ -73,6 +73,7 @@ class HomeActivity : ProBaseActivity<HomeViewModel>() {
     }
 
     override fun initData(binder: Bundle?) {
+       //val viewModel : HomeViewModel by inject()
         //todo 获取数据
         mViewModel.bind().observe(this, Observer{
                 Toast.makeText(this@HomeActivity, "a", Toast.LENGTH_SHORT).show()

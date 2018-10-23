@@ -44,7 +44,7 @@ public final class NetUtil {
      */
     public static boolean isNetworkAvailable() {
         boolean netstate = false;
-        ConnectivityManager connectivity = (ConnectivityManager) App.getContext()
+        ConnectivityManager connectivity = (ConnectivityManager) App.Companion.getContext()
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivity != null) {
 

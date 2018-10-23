@@ -28,7 +28,7 @@ public abstract class ProBaseActivity<T extends BaseViewModel> extends BaseActiv
 
     public void initInstance(){
         try {
-            mViewModel = ViewModelProviders.of(this).get((Class<T>) GenericUtil.getInstance(this,0));
+            mViewModel = ViewModelProviders.of(this).get(GenericUtil.getInstance(this,0));
             mViewModel.state.observe(this,mObserver);
         }
         catch (Exception e){

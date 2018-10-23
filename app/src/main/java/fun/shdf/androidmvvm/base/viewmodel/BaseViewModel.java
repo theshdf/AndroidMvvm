@@ -37,5 +37,6 @@ public class BaseViewModel<T extends BaseReposity> extends AndroidViewModel {
     protected void onCleared() {
         super.onCleared();
         mReposity.clearDisposable();
+        mReposity = null;
     }
 }
