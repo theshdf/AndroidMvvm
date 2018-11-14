@@ -18,13 +18,11 @@ public class ViewUtil {
     }
 
     public static CustomProgressDialog getDialogInstance(Context context) {
-        if (dialog == null) {
             dialog = new CustomProgressDialog(context);
             dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             dialog.setMessage("正在加载...");
             dialog.setCanceledOnTouchOutside(false);
             dialog.setCancelable(false);
-        }
         return dialog;
     }
 

@@ -31,13 +31,11 @@ public class RxSchedulers {
                         disposable.dispose();
                     } else {
                         addDisposable(disposable);
-                        ViewUtil.getDialogInstance(App.Companion.getActivity()).show();
                     }
                 })
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnTerminate(() -> {
-                    ViewUtil.getDialogInstance(App.Companion.getActivity()).hide();
                 });
     }
 

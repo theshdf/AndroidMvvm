@@ -1,5 +1,9 @@
 package fun.shdf.androidmvvm.http;
 
+import android.annotation.TargetApi;
+import android.os.Build;
+import android.widget.ProgressBar;
+
 import com.google.gson.JsonParseException;
 
 import org.json.JSONException;
@@ -29,6 +33,16 @@ import retrofit2.HttpException;
  **/
 public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
 
+    private ProgressBar progressBar;
+
+    protected BaseObserver(){
+
+    }
+
+    protected  BaseObserver(ProgressBar bar){
+        this.progressBar = bar;
+    }
+
     @Override
     public void onSubscribe(Disposable d) {
         //todo 判断网络
@@ -42,6 +56,7 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
 
     @Override
     public void onNext(BaseResponse<T> response) {
+        dissDialog();
         if(response.isSuccess()){
             onSuccessData(response);
         }
@@ -56,6 +71,7 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
      */
     @Override
     public void onError(Throwable e) {
+        dissDialog();
         String message;
         if (e instanceof UnknownHostException) {
             message = AppConstants.UNKNOW_HOST;
@@ -96,5 +112,14 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
      * @param msg
      */
     public abstract void onFailure(String msg);
+
+    @TargetApi(Build.VERSION_CODES.O)
+    public void dissDialog(){
+        if(progressBar != null){
+            if(progressBar.isAnimating()){
+
+            }
+        }
+    }
 
 }
