@@ -1,4 +1,4 @@
-# AndroidMvvm 2020
+# AndroidMvvm
 #### 说明
 > 基于MVVM，使用lifecycle+livedata+rxjava+retrofit+okhttp封装了通用的快速开发框架，并对Android中常见的内存泄漏做了处理。可以直接拿来快速开发
 
